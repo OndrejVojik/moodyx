@@ -9,5 +9,6 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins: [],
+	base: '/moodyx/',
   };
 });

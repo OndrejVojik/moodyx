@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Moody</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Calistoga&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-BspDGjSE.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32-D9De0Nfv.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16-Ca_gCDwF.png">
+        <link rel="manifest" href="/assets/site-Bu2g1USV.webmanifest">
+      <script type="module" crossorigin src="/assets/index-DguY1dkC.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-BzbdBIyO.css">
+    </head>
+
+    <body>
+        <section id="logged-out-view">
+            <div class="container">
+                <h1 class="app-title">Moody</h1>
+                
+                <div class="provider-buttons">
+                    <button id="sign-in-with-google-btn" class="provider-btn">
+                        <img src="/assets/google-CuA9BQ0B.png" class="google-btn-logo">
+                        Sign in with Google
+                    </button>
+                </div>
+                
+                <div class="auth-fields-and-buttons">
+                    <input id="email-input" type="email" placeholder="Email">
+                    <input id="password-input" type="password" placeholder="Password">
+                    
+                    <button id="sign-in-btn" class="primary-btn">Sign in</button>
+                    <button id="create-account-btn" class="secondary-btn">Create Account</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="logged-in-view">
+            <div class="container">
+                <nav>
+                    <button id="sign-out-btn" class="icon-btn">
+                        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%3e%3c!--!%20Font%20Awesome%20Pro%206.4.2%20by%20@fontawesome%20-%20https://fontawesome.com%20License%20-%20https://fontawesome.com/license%20(Commercial%20License)%20Copyright%202023%20Fonticons,%20Inc.%20--%3e%3cpath%20d='M377.9%20105.9L500.7%20228.7c7.2%207.2%2011.3%2017.1%2011.3%2027.3s-4.1%2020.1-11.3%2027.3L377.9%20406.1c-6.4%206.4-15%209.9-24%209.9c-18.7%200-33.9-15.2-33.9-33.9l0-62.1-128%200c-17.7%200-32-14.3-32-32l0-64c0-17.7%2014.3-32%2032-32l128%200%200-62.1c0-18.7%2015.2-33.9%2033.9-33.9c9%200%2017.6%203.6%2024%209.9zM160%2096L96%2096c-17.7%200-32%2014.3-32%2032l0%20256c0%2017.7%2014.3%2032%2032%2032l64%200c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032l-64%200c-53%200-96-43-96-96L0%20128C0%2075%2043%2032%2096%2032l64%200c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032z'/%3e%3c/svg%3e" class="icon-img-btn">
+                    </button>
+                </nav>
+                
+                <div class="app-container">
+                    <div class="user-section">
+                        <img id="user-profile-picture">
+                        <h2 id="user-greeting"></h2>
+                    </div>
+                    
+                    <div class="mood-emojis">
+                        <button id="mood-1" class="mood-emoji-btn">
+                            <img src="/assets/1-DzoSBo1F.png">
+                            Awful
+                        </button>
+                        <button id="mood-2" class="mood-emoji-btn">
+                            <img src="/assets/2-Cd2hp5SB.png">
+                            Bad
+                        </button>
+                        <button id="mood-3" class="mood-emoji-btn">
+                            <img src="/assets/3-Bz8r3q0j.png">
+                            Meh
+                        </button>
+                        <button id="mood-4" class="mood-emoji-btn">
+                            <img src="/assets/4-C18QMlp-.png">
+                            Good
+                        </button>
+                        <button id="mood-5" class="mood-emoji-btn">
+                            <img src="/assets/5-DlyqjkwL.png">
+                            Amazing
+                        </button>
+                    </div>
+                    
+                    <div class="post-section">
+                        <textarea id="post-input" placeholder="Write down how you're feeling..."></textarea>
+                        <button id="post-btn" class="primary-btn">Post</button>
+                    </div>
+                    
+                    <div class="filters-and-posts-section">
+                        <div class="filters-section">
+                            <button id="today-filter-btn" class="filter-btn">Today</button>
+                            <button id="week-filter-btn" class="filter-btn">Week</button>
+                            <button id="month-filter-btn" class="filter-btn">Month</button>
+                            <button id="all-filter-btn" class="filter-btn">All</button>
+                        </div>
+                        
+                        <div id="posts" class="posts-section">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+
+</html>
