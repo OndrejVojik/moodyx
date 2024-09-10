@@ -18,6 +18,7 @@ import { getFirestore,
          doc,
          updateDoc, 
          deleteDoc} from "firebase/firestore"
+import defaultProfilePicture from "./assets/images/default-profile-picture.jpeg";
 
 /* === Firebase Setup === */
 /* IMPORTANT: Replace this with your own firebaseConfig when doing challenges */
@@ -278,9 +279,25 @@ function createPostHeader(postData) {
         /* 
             <img src="assets/emojis/5.png">
         */
-        const moodImage = document.createElement("img")
-        moodImage.src = `assets/emojis/${postData.mood}.png`
-        headerDiv.appendChild(moodImage)
+
+        const images = import.meta.glob('./assets/emojis/*.png');
+
+        const moodImagePath = `./assets/emojis/${postData.mood}.png`;
+        
+        if (images[moodImagePath]) {
+            images[moodImagePath]().then((module) => {
+                const moodImageSrc = module.default;
+        
+                // Use moodImageSrc in your code
+                const moodImage = document.createElement("img");
+                moodImage.src = moodImageSrc;
+                headerDiv.appendChild(moodImage);
+            }).catch((error) => {
+                console.error('Error loading image:', error);
+            });
+        } else {
+            console.error('Image not found:', moodImagePath);
+        }
         
     return headerDiv
 }
@@ -412,7 +429,7 @@ function showProfilePicture(imgElement, user) {
     if (photoURL) {
         imgElement.src = photoURL
     } else {
-        imgElement.src = "assets/images/default-profile-picture.jpeg"
+        imgElement.src = defaultProfilePicture
     }
 }
 

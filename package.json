@@ -1,5 +1,6 @@
 {
-  "name": "project",
+  "homepage": "https://ondrejvojik.github.io/moodyx/",
+  "name": "moodyx",
   "dependencies": {
     "firebase": "^10.13.1"
   },
