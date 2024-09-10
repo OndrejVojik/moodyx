@@ -439,7 +439,7 @@ function showUserGreeting(element, user) {
     if (displayName) {
         const userFirstName = displayName.split(" ")[0]
         
-        element.textContent = `Hey ${userFirstName}, how are you?`
+        element.textContent = `Hey ${userFirstName}, how are You?`
     } else {
         element.textContent = `Hey friend, how are you?`
     }
