@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1e00ff;
+    --primary-color: #FFDE00;
     --primary-light-color: #FFE769;
     --secondary-color: #FFE4BA;
     --secondary-light-color: #FFF6E8;
@@ -29,7 +29,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    user-select: none;
+    user-select: ;
 }
 
 body {
